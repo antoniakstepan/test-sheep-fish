@@ -7,7 +7,7 @@ import { fetchCategories } from "../features/categories/categorySlice";
 import { editProduct, addProduct } from "../features/product/productSlice";
 import { Product } from "../features/product/productSlice";
 // Formik
-import { Formik, Form, Field, FormikProps, ErrorMessage } from "formik";
+import { Formik, Form, Field, FormikProps } from "formik";
 // Material
 import { TextField, Autocomplete, Button } from "@mui/material";
 type EditFormType = {
@@ -18,7 +18,7 @@ type EditFormType = {
 const EditForm = ({ product, onClose }: EditFormType) => {
   const dispatch = useDispatch<AppDispatch>();
 
-  const { status, error, category } = useSelector(
+  const { status, category } = useSelector(
     (state: RootState) => state.category
   );
   interface ProductEdit {

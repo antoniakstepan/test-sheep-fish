@@ -7,7 +7,6 @@ import {
   IconButton,
   List,
   ListItem,
-  ListItemText,
 } from "@mui/material";
 
 function classNames(...classes: any) {
